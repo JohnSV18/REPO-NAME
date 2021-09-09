@@ -4,11 +4,16 @@ if (!process.env.PORT) {
 }
 
 const express = require('express');
+// core module in node that allows you to interact with file paths easily
 const path = require('path');
 const favicon = require('serve-favicon');
+// print debugging messages on a separate console window at the bottom of the web browser
 const logger = require('morgan');
+// parses cookies attatched to the client request object
 const cookieParser = require('cookie-parser');
+// Basically what the body-parser is which allows express to read the body and then parse that into a Json object that we can understand
 const bodyParser = require('body-parser');
+// Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn’t support it.
 const methodOverride = require('method-override')
 
 const app = express();
